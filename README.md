@@ -6,8 +6,8 @@ Installation with lazy.nvim is as simple as,
 ```lua
 {
     'samuelireson/texsnip.nvim',
-    config = true
-    dependencies = { 'L3MON4D3/luasnip' },
+    config = true,
+    dependencies = { 'L3MON4D3/luasnip' }
 }
 ```
 
@@ -21,8 +21,8 @@ configurations, but you can configure your preamble path as follows,
         require("texsnip").setup({
             preamble_path = '~/path/to/preamble'
         })
-    end
-    dependencies = { 'L3MON4D3/luasnip' },
+    end,
+    dependencies = { 'L3MON4D3/luasnip' }
 }
 ```
 
