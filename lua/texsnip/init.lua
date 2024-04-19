@@ -1,10 +1,13 @@
+local ls = require("luasnip")
+local config = require("texsnip.config")
+
 local M = {}
 
-local ls = require("luasnip")
-local allsnippets = require("texsnip.snippets")
+M.setup = function(opts)
+	config.setup(opts)
 
-M.setup = function()
-	for index, lettersnippets in ipairs(allsnippets) do
+	local snippets = require("texsnip.snippets")
+	for index, lettersnippets in ipairs(snippets) do
 		ls.add_snippets("tex", lettersnippets)
 	end
 end

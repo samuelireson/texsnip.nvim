@@ -1,12 +1,10 @@
+local config = require("texsnip.config")
 local ls = require("luasnip")
 local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
-local f = ls.function_node
 
-local math = function()
-	return vim.fn["vimtex#syntax#in_mathzone"]() == 1
-end
+local preamble_path = config.get("preamble_path")
 
 return {
 	s({ trig = "dc", snippetType = "snippet" }, {
@@ -35,16 +33,11 @@ return {
 			"\\end{document}",
 		}),
 	}),
-	s({ trig = "di" }, {
-		t("\\input{chapters/chapter-"),
-		i(1),
-		t("}"),
-	}),
 	s({ trig = "dn" }, {
 		t({
 			"\\documentclass[11pt]{report}",
 			"",
-			"\\input{~/Documents/year-3/preamble/final-year-notes-preamble.tex}",
+			"\\input{" .. preamble_path .. "}",
 			"",
 			"\\title{",
 		}),
