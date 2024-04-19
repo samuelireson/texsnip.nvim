@@ -29,4 +29,4 @@ configurations, but you can configure your preamble path as follows,
 ## Contribution
 PRs are welcomed! The aim is to automatically expand as many snippets as
 possible based on the context of the `.tex` file. This project is all about
-making LaTeX notes as easily, ad quickly as possible.
+making LaTeX notes as easily, and quickly as possible.
