@@ -1,9 +1,6 @@
 # TexSnip.nvim
 A collection of LuaSnip snippets for LaTeX.
 
-## Demo
-![Demo](demo/demo.mp4)
-
 ## Installation
 Installation with lazy.nvim is as simple as,
 ```lua
